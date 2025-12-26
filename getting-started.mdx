@@ -1,0 +1,138 @@
+---
+title: Getting Started with Aagnia
+description: Step-by-step guide to initiate your engagement with Aagnia, from initial contact to project kickoff.
+---
+
+## Overview
+
+Get started with Aagnia Technologies by following this quickstart guide. You will contact the sales team, schedule a consultation, scope your project, and complete onboarding essentials. Aagnia specializes in custom software development, enterprise web and mobile apps, industrial IoT, and AI-driven solutions. This process typically takes 1-2 weeks, depending on your project's complexity.
+
+<Callout kind="info">
+Before beginning, prepare:
+- Your project requirements document
+- Business goals and timeline
+- Technical stack preferences (e.g., React for web, Flutter for mobile)
+- Budget estimates
+</Callout>
+
+## Prerequisites
+
+Ensure you have the following ready:
+
+- A clear project brief outlining your needs, such as web app development or IoT integration.
+- Access to email and a scheduling tool like Google Calendar.
+- Decision-makers available for consultations.
+
+## Step-by-Step Onboarding Process
+
+Follow these sequential steps to kick off your project with Aagnia.
+
+<Steps>
+  <Step title="Contact the Sales Team" icon="mail">
+    Reach out via email or the contact form on the Aagnia website.
+
+    <Tabs>
+      <Tab title="Email" icon="send">
+        Send an email to `sales@aagnia.com` with your project overview.
+      </Tab>
+      <Tab title="Contact Form" icon="form">
+        Visit `https://aagnia.com/contact` and submit the form.
+      </Tab>
+    </Tabs>
+
+    <CodeGroup tabs="Email Template,API Contact">
+    ````html
+    <form action="https://api.aagnia.com/v1/contact" method="POST">
+      <input type="email" name="email" placeholder="your@email.com" required>
+      <textarea name="message" placeholder="Describe your project..."></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    ````
+    ````javascript
+    fetch('https://api.aagnia.com/v1/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        email: 'your@email.com',
+        message: 'Need custom IoT solution for manufacturing.'
+      })
+    });
+    ````
+    </CodeGroup>
+  </Step>
+
+  <Step title="Schedule Consultation" icon="calendar">
+    A sales representative will respond within 24 hours. Reply to schedule a 30-minute call using the provided Calendly link.
+
+    Review the agenda:
+    - Discuss your business challenges
+    - Outline technical requirements
+    - Estimate timelines and costs
+  </Step>
+
+  <Step title="Project Scoping" icon="search">
+    During the call, collaborate on a project scope document. This includes:
+
+    | Phase       | Deliverables                  | Timeline |
+    |-------------|-------------------------------|----------|
+    | Discovery   | Requirements gathering       | 1 week  |
+    | Design      | Architecture & UI/UX         | 2 weeks |
+    | Development | Core features implementation | 4-8 weeks |
+    | Testing     | QA & deployment              | 2 weeks |
+
+    Sign the Statement of Work (SOW) to proceed.
+  </Step>
+
+  <Step title="Onboarding Essentials" icon="check-circle">
+    Receive your project portal access at `https://dashboard.aagnia.com`.
+
+    <CodeGroup tabs="Node.js,Python">
+    ````javascript
+    // Set up API client
+    const AagniaAPI = require('aagnia-sdk');
+    const client = new AagniaAPI({ apiKey: 'YOUR_API_KEY' });
+    const projects = await client.projects.list();
+    console.log(projects);
+    ````
+    ````python
+    # Install: pip install aagnia-sdk
+    from aagnia import Client
+    client = Client(api_key='YOUR_API_KEY')
+    projects = client.projects.list()
+    print(projects)
+    ````
+    </CodeGroup>
+
+    Join the Slack workspace and review the kickoff deck.
+  </Step>
+</Steps>
+
+## Next Steps and Resources
+
+<Columns cols={3}>
+  <Card title="Project Portal" icon="monitor" href="https://dashboard.aagnia.com">
+    Access your dashboard, documents, and team chat.
+  </Card>
+  <Card title="API Documentation" icon="code" href="https://docs.aagnia.com/api">
+    Integrate with Aagnia APIs for real-time updates.
+  </Card>
+  <Card title="Support" icon="help-circle" href="https://aagnia.com/support">
+    Get help from our team anytime.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+Your dedicated project manager will guide you through development. Track progress in the portal and schedule weekly check-ins.
+</Callout>
+
+<Expandable title="Advanced Onboarding Options" default-open="false">
+For enterprise clients, request custom integrations like webhook setup:
+
+````javascript
+// Webhook example
+app.post('/webhook/aagnia', (req, res) => {
+  console.log('Project update:', req.body);
+  res.status(200).send('OK');
+});
+````
+</Expandable>

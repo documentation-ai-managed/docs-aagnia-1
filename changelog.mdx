@@ -1,0 +1,124 @@
+---
+title: Changelog
+description: History of updates, new services, and enhancements from Aagnia Technologies.
+---
+
+## Recent Updates
+
+Aagnia Technologies continuously improves its platform to deliver cutting-edge IT solutions. Review the latest releases below to see new service launches, platform enhancements, client feedback integrations, and more. Each update includes details on features, improvements, and fixes.
+
+<Columns cols={3}>
+  <Card title="v2.0.0" icon="rocket" href="#v2-0-0">
+    Launched AI-driven solutions and IoT integrations.
+  </Card>
+  <Card title="v1.5.0" icon="trending-up" href="#v1-5-0">
+    Enhanced client feedback tools and mobile SDK.
+  </Card>
+  <Card title="v1.0.0" icon="package" href="#v1-0-0">
+    Initial platform release with core services.
+  </Card>
+</Columns>
+
+<Update label="2024-10-15" description="v2.0.0" tags={["feature", "improvement"]} id="v2-0-0">
+
+## New Features
+
+- Launched enterprise AI services for predictive analytics and machine learning models.
+- Added industrial IoT platform with real-time data processing for sensors and devices.
+
+## Improvements
+
+- Optimized web and mobile app deployment pipelines for `<50ms` response times.
+- Integrated client feedback directly into service dashboards.
+
+## Code Integration Example
+
+Use the new AI API endpoint:
+
+````jsx
+<CodeGroup tabs="JavaScript,Python">
+```javascript
+const response = await fetch('https://api.example.com/v2/ai/predict', {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${YOUR_API_KEY}` },
+  body: JSON.stringify({ data: [1, 2, 3] })
+});
+```
+```python
+import requests
+response = requests.post(
+    'https://api.example.com/v2/ai/predict',
+    headers={'Authorization': f'Bearer {YOUR_API_KEY}'},
+    json={'data': [1, 2, 3]}
+)
+```
+</CodeGroup>
+````
+
+</Update>
+
+<Update label="2024-09-20" description="v1.5.0" tags={["feature", "bugfix"]} id="v1-5-0">
+
+## New Features
+
+- Introduced client feedback integration API for seamless survey collection.
+- Released mobile SDK for iOS and Android with offline support.
+
+## Bug Fixes
+
+- Fixed authentication issues in multi-tenant environments.
+- Resolved IoT data sync delays during high-volume ingestion.
+
+## Improvements
+
+- Enhanced consulting dashboard with customizable widgets.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature"]} id="v1-0-0">
+
+## Initial Release
+
+- Core custom software development platform.
+- End-to-end IT services including web, mobile, and consulting.
+- Basic architecture design tools for enterprise solutions.
+
+</Update>
+
+<Callout kind="tip">
+Subscribe to our newsletter or follow us on GitHub at https://github.com/aagnia-tech/platform for instant update notifications.
+</Callout>
+
+## Upcoming Features
+
+<Expandable title="Roadmap Preview" default-open="true">
+
+- Advanced AI consulting with generative models.
+- Full-stack IoT security suite.
+- Expanded client portal for real-time project tracking.
+
+These features roll out in Q1 2025. Check back for beta access instructions.
+
+</Expandable>
+
+## How to Upgrade
+
+Follow these steps to ensure your services stay current:
+
+<Steps>
+  <Step title="Check Version" icon="check">
+    Run `aagnia version` in your CLI to verify current installation.
+  </Step>
+  <Step title="Update SDK" icon="download">
+````bash
+npm update @aagnia/sdk --save
+````
+
+  </Step>
+  <Step title="Test Integrations" icon="zap">
+    Validate endpoints like `https://api.example.com/v2/ai/predict`.
+  </Step>
+  <Step title="Review Changelog" icon="book-open">
+    Scan this page for breaking changes.
+  </Step>
+</Steps>
